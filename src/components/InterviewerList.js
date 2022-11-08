@@ -1,6 +1,7 @@
 import React from "react";
 import InterviewerListItem from "./InterviewerListItem.js";
 import "components/InterviewerList.scss";
+import PropTypes from 'prop-types';
 
 export default function InterviewerList(props) {
   const ints = props.interviewers;
@@ -14,6 +15,10 @@ export default function InterviewerList(props) {
     setInterviewer={() => props.onChange(int.id)}
     selected={int.id === props.value} />
   ));
+
+  InterviewerList.propTypes = {
+    interviewers: PropTypes.array.isRequired
+  };
   
   return (
     <section className="interviewers">

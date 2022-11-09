@@ -2,7 +2,7 @@ import React from "react";
 import DayListItem from "./DayListItem.js";
 
 export default function DayList(props) {
-  console.log("daylist:", props)
+  
   const days = props.days;
   const isDayAnArray = Array.isArray(days);
 

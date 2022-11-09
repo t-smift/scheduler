@@ -22,7 +22,7 @@ export default function Application(props) {
   const parsedAppointments = 
   Object.values(dailyAppointments).map(appointment => {
     const interview = getInterview(state, appointment.interview);
-    console.log('appointment:', appointment.interview)
+    
 
     return (
     <Appointment 

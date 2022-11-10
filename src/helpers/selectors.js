@@ -5,7 +5,7 @@ export function getAppointmentsForDay(state, day) {
   if (!selectedDay) return result;
 
   for (const appId of selectedDay.appointments) {
-    const appointmentObj = state.appointments[appId]
+    const appointmentObj = state.appointments[appId];
     result.push(appointmentObj);
   }
 
@@ -32,10 +32,10 @@ export function getInterviewersForDay(state, day) {
   let finalIntList = interviewerList.map((id) => {
     for (let interviewer in state.interviewers) {
       if (Number(interviewer) === id) {
-        return state.interviewers[interviewer]
+        return state.interviewers[interviewer];
       }
     }
-  })
+  });
 
   return finalIntList;
-}
+};

@@ -28,5 +28,5 @@ export default function InterviewerList(props) {
         {parsedInts}
       </ul>
     </section>
-  )
-}
+  );
+};

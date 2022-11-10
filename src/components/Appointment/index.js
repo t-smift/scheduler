@@ -29,21 +29,21 @@ export default function Appointment(props) {
     const interview = {
       student: name,
       interviewer
-    }
+    };
     if (interviewer) {
-      transition(SAVING, true)
+      transition(SAVING, true);
       props.bookInterview(props.id, interview)
       .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true))
     }
-  }
+  };
 
   function deleter (interview) {
-    transition(DELETING, true)
+    transition(DELETING, true);
     props.cancelInterview(props.id)
     .then(() => transition(EMPTY))
     .catch(error => transition(ERROR_DELETE, true))
-  }
+  };
   return (
     <article className="appointment" data-testid="appointment" >
     <Fragment>
@@ -93,5 +93,5 @@ export default function Appointment(props) {
       )}
     </Fragment>  
     </article>
-  )
+  );
 };

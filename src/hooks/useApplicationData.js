@@ -22,7 +22,7 @@ export default function useApplicationData(initial) {
             }).length
         };
       }
-      return day
+      return day;
     });
   };
 
@@ -72,4 +72,4 @@ export default function useApplicationData(initial) {
   }, []);
 
   return { state, setDay, bookInterview, cancelInterview };
-}
+};

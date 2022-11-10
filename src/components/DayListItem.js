@@ -12,10 +12,10 @@ export default function DayListItem(props) {
     });
   
   const formatSpots = () => {
-      if (props.spots === 0) return "no spots remaining";
-      if (props.spots === 1) return "1 spot remaining";
-      return `${props.spots} spots remaining`;
-    }
+    if (props.spots === 0) return "no spots remaining";
+    if (props.spots === 1) return "1 spot remaining";
+    return `${props.spots} spots remaining`;
+  }
 
   return (
     <li 
@@ -27,4 +27,4 @@ export default function DayListItem(props) {
       <h3 className="text--light">{formatSpots()}</h3>
     </li>
   );
-}
+};

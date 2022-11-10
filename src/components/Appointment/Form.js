@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from "../Button.js";
-import InterviewerList from "../InterviewerList.js"
+import InterviewerList from "../InterviewerList.js";
 
 export default function Form(props) {
   const [student, setStudent] = useState(props.student || "");
@@ -8,12 +8,12 @@ export default function Form(props) {
   const [error, setError] = useState("");
 
   const handleStudent = function (event) {
-    setStudent(event.target.value)
+    setStudent(event.target.value);
   }
   const reset = function () {
-    setStudent("")
-    setInterviewer(null)
-    props.onCancel()
+    setStudent("");
+    setInterviewer(null);
+    props.onCancel();
   }
   function validate() {
     if (student === "") {
@@ -55,5 +55,5 @@ export default function Form(props) {
         </section>
       </section>
     </main>
-  )
-}
+  );
+};

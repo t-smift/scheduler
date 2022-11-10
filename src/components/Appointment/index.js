@@ -30,13 +30,16 @@ export default function Appointment(props) {
       student: name,
       interviewer
     };
+
     if (interviewer) {
       transition(SAVING, true);
+      
       props.bookInterview(props.id, interview)
       .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true))
     }
   };
+
 
   function deleter (interview) {
     transition(DELETING, true);
@@ -44,6 +47,8 @@ export default function Appointment(props) {
     .then(() => transition(EMPTY))
     .catch(error => transition(ERROR_DELETE, true))
   };
+
+
   return (
     <article className="appointment" data-testid="appointment" >
     <Fragment>

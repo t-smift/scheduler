@@ -3,7 +3,7 @@ Interview Scheduler is a single-page web app that allows a user to book an appoi
 
 Created by Taylor Smith as part of the Lighthouse Labs full-time web development bootcamp program. 
 
-## Screenshots of the finished project
+## Screenshots of the Finished Project
 
 ## Setup
 Clone this repository on to your local device. 
@@ -13,20 +13,12 @@ Run `npm start` from the terminal while in the scheduler-api project.
 Run `npm start` from the terminal while in the scheduler project.
 This will open a React window in your preferred browser. 
 
-## Running Webpack Development Server
+## Dependencies
+- React
+- Storybook
+- React Testing Library
+- Axios
+- classnames
+- Cypress Testing
+- Jest Testing
 
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```

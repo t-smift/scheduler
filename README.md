@@ -4,6 +4,11 @@ Interview Scheduler is a single-page web app that allows a user to book an appoi
 Created by Taylor Smith as part of the Lighthouse Labs full-time web development bootcamp program. 
 
 ## Screenshots of the Finished Project
+![Browse Appointments](https://github.com/t-smift/scheduler/blob/master/docs/Browse%20Available%20Appointments.png?raw=true)
+
+![Book New Appointment](https://github.com/t-smift/scheduler/blob/master/docs/Book%20New%20Appointment.png?raw=true)
+
+![Delete Appointment Confirmation](https://github.com/t-smift/scheduler/blob/master/docs/Confirm%20Delete%20Appointment.png?raw=true)
 
 ## Setup
 Clone this repository on to your local device. 

@@ -38,7 +38,7 @@ export default function useApplicationData() {
     };
     return axios
       .put(`/api/appointments/${id}`, { interview })
-      .then(setState({ ...state, appointments, days: calculateSpotsRemaining(state, appointments) }));
+      .then(() => setState({ ...state, appointments, days: calculateSpotsRemaining(state, appointments) }));
   };
 
   //takes an aoointment with given ID and sets the interview to null, returns the same style as above. 
@@ -53,7 +53,7 @@ export default function useApplicationData() {
     };
     return axios
       .delete(`/api/appointments/${id}`)
-      .then(setState(prev => ({ ...prev, appointments: appointments, days: calculateSpotsRemaining(state, appointments) })));
+      .then(() => setState(prev => ({ ...prev, appointments: appointments, days: calculateSpotsRemaining(state, appointments) })));
 
   };
 

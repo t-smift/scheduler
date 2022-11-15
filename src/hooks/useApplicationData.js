@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function useApplicationData(initial) {
+//sets state for application, initial day is set to Monday and the rest are empty to begin
+export default function useApplicationData() {
   const [state, setState] = useState({
     day: "Monday",
     days: [],
@@ -9,7 +10,7 @@ export default function useApplicationData(initial) {
     interviewers: {}
   });
 
-
+//function will update the 'spots remaining' when booking or cancelling an appointment, by adjusting state
   const calculateSpotsRemaining = function (state, appointments) {
     return state.days.map((day) => {
       if (day.name === state.day) {
@@ -25,9 +26,8 @@ export default function useApplicationData(initial) {
       return day;
     });
   };
-
+//adds an new appointment to the appointments object, returns a put call to the API and sets the new state, wich calls the above function as well
   const bookInterview = function (id, interview) {
-    console.log('book:', id, interview);
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
@@ -41,6 +41,7 @@ export default function useApplicationData(initial) {
       .then(setState({ ...state, appointments, days: calculateSpotsRemaining(state, appointments) }));
   };
 
+  //takes an aoointment with given ID and sets the interview to null, returns the same style as above. 
   const cancelInterview = function (id) {
     const appointment = {
       ...state.appointments[id],
@@ -55,6 +56,7 @@ export default function useApplicationData(initial) {
       .then(setState(prev => ({ ...prev, appointments: appointments, days: calculateSpotsRemaining(state, appointments) })));
 
   };
+  
   const setDay = day => setState({ ...state, day });
 
   useEffect(() => {

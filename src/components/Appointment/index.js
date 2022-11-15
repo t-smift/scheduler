@@ -9,7 +9,7 @@ import Status from "./Status.js"
 import Confirm from "./Confirm.js"
 import Error from "./Error.js"
 
-
+//modes to represent the different componenets that will be rendered based on state
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE = "CREATE";
@@ -48,7 +48,7 @@ export default function Appointment(props) {
     .catch(error => transition(ERROR_DELETE, true))
   };
 
-
+//html uses && as conditionals, to render the componenent based on state logic
   return (
     <article className="appointment" data-testid="appointment" >
     <Fragment>
@@ -77,7 +77,7 @@ export default function Appointment(props) {
           student={props.interview && props.interview.student}
           interviewer={props.interview && props.interview.interviewer.id}
           interviewers={props.interviewers}
-          onCancel={() => transition(SHOW)}
+          onCancel={() => back()}
           onSave={save}
         />
       )}

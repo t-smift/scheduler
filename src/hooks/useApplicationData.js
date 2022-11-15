@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 //sets state for application, initial day is set to Monday and the rest are empty to begin
@@ -56,7 +56,7 @@ export default function useApplicationData() {
       .then(setState(prev => ({ ...prev, appointments: appointments, days: calculateSpotsRemaining(state, appointments) })));
 
   };
-  
+
   const setDay = day => setState({ ...state, day });
 
   useEffect(() => {

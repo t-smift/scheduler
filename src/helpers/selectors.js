@@ -42,6 +42,7 @@ export function getInterviewersForDay(state, day) {
         return state.interviewers[interviewer];
       }
     }
+    return interviewerList
   });
 
   return finalIntList;

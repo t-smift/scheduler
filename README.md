@@ -27,3 +27,8 @@ This will open a React window in your preferred browser.
 - Cypress Testing
 - Jest Testing
 
+## Run Jest Test Framework
+- npm test
+
+## Run Storybook Visual Test Method
+- npm run storybook
